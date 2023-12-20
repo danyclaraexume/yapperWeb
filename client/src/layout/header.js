@@ -1,12 +1,12 @@
 import Navigation from "../components/navigation"
-import UtilsBar from "../components/utilsBar"
+import SearchBar from "../components/searchBar"
 import {Stack} from "@mui/material"
 
 const Header = () => {
     return(
-        <Stack>
-            <UtilsBar/>
+        <Stack direction={{ xs: 'row', sm: 'row' }} spacing={{ xs: 1, sm: 2, md: 2 }}>
             <Navigation/>
+            <SearchBar/>
         </Stack>
     )
 }

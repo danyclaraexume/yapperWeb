@@ -5,6 +5,7 @@ import HomePage from './views/home';
 import ErrorPage from './views/error';
 
 function App() {
+
   const router = createBrowserRouter([
     {
       path: "/",
@@ -14,7 +15,7 @@ function App() {
   ]);
 
   return (
-     <RouterProvider router={router} />
+      <RouterProvider router={router} />
   );
 }
 
