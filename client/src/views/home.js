@@ -1,10 +1,11 @@
 import React from 'react';
+import PageContainer from '../layout/pageContainer';
 
 const HomePage = () => {
     return(
-        <div>
+        <PageContainer>
             <h1>Home</h1>
-        </div>
+        </PageContainer>
     );
 }
 
