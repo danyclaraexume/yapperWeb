@@ -48,15 +48,15 @@ const PageContainer = ({ children }) => {
         <Header/>
         <Item>
           <Stack  direction={{ xs: 'row', sm: 'row' }} spacing={{ xs: 1, sm: 1, md: 1 }}>
-            <img src={toggleDarkMode?"bright.png":"brightness.svg"} alt="Brightness" style={{width:"25px",height:"25px", marginTop:"5px", marginLeft: "5px"}}/>
+            <img src={toggleDarkMode?"./icons/bright.png":"./icons/brightness.svg"} alt="Brightness" style={{width:"25px",height:"25px", marginTop:"5px", marginLeft: "5px"}}/>
             <Switch checked={toggleDarkMode} onChange={toggleDarkTheme} />
           </Stack>
         </Item>
         <Item>
-          <img src="globe.png" alt="Region" style={{width:"25px",height:"25px", margin:"10px 5px 0px 5px"}}/>
+          <img src="./icons/globe.png" alt="Region" style={{width:"25px",height:"25px", margin:"10px 5px 0px 5px"}}/>
         </Item>
         <Item>
-          <img src="Settings.png" alt="Region" style={{width:"27px",height:"25px", margin:"10px 5px 0px 5px"}}/>
+          <img src="./icons/setting.png" alt="Region" style={{width:"27px",height:"25px", margin:"10px 5px 0px 5px"}}/>
         </Item>
       </Stack>
       <div>
