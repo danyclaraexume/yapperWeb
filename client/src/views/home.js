@@ -1,7 +1,8 @@
 import React from 'react';
 import PageContainer from '../layout/pageContainer';
 import FeedPost from '../components/post';
-import { Stack } from '@mui/material';
+import { Stack, Grid } from '@mui/material';
+import YourPost from '../components/yourPost'
 
 const HomePage = () => {
 
@@ -14,20 +15,25 @@ const HomePage = () => {
 
     return(
         <PageContainer>
-            <Stack direction={{ xs: 'column', sm: 'row' }} spacing={{ xs: 1, sm: 2, md: 4 }} justifyContent="center" style={{border: "red solid 1px"}}>
-                <Stack style={{border: "yellow solid 1px"}}>Trending...</Stack>
-                <Stack 
-                    direction="column"
-                    spacing={2}
-                >
-                {posts.map((post) => (
-                    <FeedPost key={post.id} theusername={post.theusername} content={post.content} postDate={post.postDate} />
-                ))} 
+            <Grid container spacing={2} justifyContent="center">
+                <Grid item xs={12} sm={3}>
+                <Stack style={{ border: 'yellow solid 1px', width: '100%' }}>
+                    Trending...
                 </Stack>
-                <Stack md={4}>Pub</Stack>
-
-            </Stack>
-        </PageContainer>
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                    <YourPost/>
+                    <Stack direction="column" spacing={2} style={{ width: '100%' }}>
+                        {posts.map((post) => (
+                        <FeedPost key={post.id} theusername={post.theusername} content={post.content} postDate={post.postDate} />
+                        ))}
+                    </Stack>
+                </Grid>
+                <Grid item xs={12} sm={3}>
+                <Stack style={{ width: '100%' }}>Pub</Stack>
+                </Grid>
+            </Grid>
+    </PageContainer>
     );
 }
 

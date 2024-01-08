@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Header from "./header";
 import Footer from "./footer";
-import { Container, Stack, Paper, styled, Switch  } from "@mui/material";
+import { Container, Stack, Switch, MenuItem, MenuList } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 
@@ -28,11 +28,11 @@ const PageContainer = ({ children }) => {
     },
   });
 
-  const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: toggleDarkMode? '#1A2027' : '#F5FFFA',
-    textAlign: 'center',
-    color: toggleDarkMode? '#fff' : '#1A2027',
-  }));
+  // const Item = styled(Paper)(({ theme }) => ({
+  //   backgroundColor: toggleDarkMode? '#1A2027' : '#F5FFFA',
+  //   textAlign: 'center',
+  //   color: toggleDarkMode? '#fff' : '#1A2027',
+  // }));
 
 
   return (
@@ -46,19 +46,20 @@ const PageContainer = ({ children }) => {
               margin={{md: 1}}
       >
         <Header/>
-        <Item>
-          <Stack  direction={{ xs: 'row', sm: 'row' }} spacing={{ xs: 1, sm: 1, md: 1 }}>
+        <MenuList className='navbar-List' style={{display: "inline-flex"}}>
+          <MenuItem>
             <img src={toggleDarkMode?"./icons/bright.png":"./icons/brightness.svg"} alt="Brightness" style={{width:"25px",height:"25px", marginTop:"5px", marginLeft: "5px"}}/>
             <Switch checked={toggleDarkMode} onChange={toggleDarkTheme} />
-          </Stack>
-        </Item>
-        <Item>
-          <img src="./icons/globe.png" alt="Region" style={{width:"25px",height:"25px", margin:"10px 5px 0px 5px"}}/>
-        </Item>
-        <Item>
-          <img src="./icons/setting.png" alt="Region" style={{width:"27px",height:"25px", margin:"10px 5px 0px 5px"}}/>
-        </Item>
+          </MenuItem>
+          <MenuItem>
+            <img src="./icons/globe.png" alt="Region icon" style={{width:"20px",height:"20px", margin:"5px 5px 0px 5px"}}/>
+          </MenuItem>
+          <MenuItem>
+            <img src="./icons/setting.png" alt="Setting icon" style={{width:"22px",height:"20px", margin:"5px 5px 0px 5px"}}/>
+          </MenuItem>
+        </MenuList>
       </Stack>
+      <hr/>
       <div>
         {children}
       </div>

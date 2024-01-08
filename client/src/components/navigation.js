@@ -12,19 +12,19 @@ const Navigation = () => {
     return (
         <div className="menuList">
             <MenuList className='navbar-List' style={{display: "inline-flex"}}>
-                        <MenuItem>
-                            <Link to='/' className='menuLink'><HomeIcon className='menuIcon'/><span>Home</span></Link>
-                        </MenuItem>
-                        <MenuItem>
-                            <Link to='/profile' className='menuLink'><AccountCircleIcon className='menuIcon'/><span>Profile</span></Link>
-                        </MenuItem>
-                        <MenuItem>
-                            <Link to='/chat' className='menuLink'><ChatIcon className='menuIcon'/><span>Chat</span></Link>
-                        </MenuItem>
-                        <MenuItem>
-                            <Link to='/contact' className='menuLink'><PeopleIcon className='menuIcon'/><span>Contact</span></Link>
-                        </MenuItem>
-                    </MenuList>
+                <MenuItem>
+                    <Link to='/' className='menuLink'><HomeIcon className='menuIcon'/><span>Home</span></Link>
+                </MenuItem>
+                <MenuItem>
+                    <Link to='/chat' className='menuLink'><ChatIcon className='menuIcon'/><span>Chat</span></Link>
+                </MenuItem>
+                <MenuItem>
+                    <Link to='/profile' className='menuLink'><AccountCircleIcon className='menuIcon'/><span>Profile</span></Link>
+                </MenuItem>
+                <MenuItem>
+                    <Link to='/contact' className='menuLink'><PeopleIcon className='menuIcon'/><span>Contact</span></Link>
+                </MenuItem>
+            </MenuList>
         </div>
     );
 }
